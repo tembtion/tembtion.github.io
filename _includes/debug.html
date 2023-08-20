@@ -1,0 +1,11 @@
+<script lang="javascript">
+console.log("page.title        = " + {{ page.title| jsonify }});
+console.log("page.url          = " + {{ page.url | jsonify }});
+console.log("site.url          = " + {{ site.url | jsonify }});
+console.log("site.baseurl      = " + {{ site.baseurl | jsonify }});
+console.log("site.logo         = " + {{ site.logo | jsonify }});
+
+console.log("page.next.url     = " + {{ page.next.url | jsonify }});
+console.log("page.previous.url = " + {{ page.previous.url | jsonify }});
+
+</script>

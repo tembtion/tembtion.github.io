@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    {% include dynamic_title.html %}
+    <title>{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/built/aos.css" />
+    <style>
+        .hljs { background: none; }
+        .post-card-image { transition: all .5s ease-out;}
+        .post-card-image:hover { transform: scale(1.1); }
+
+        /* 滚动槽 */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 3px;
+            background: rgba(0,0,0,0.06);
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+        }
+        /* 滚动条滑块 */
+        ::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            background: rgba(0,0,0,0.12);
+            -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+        }
+    </style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+</head>
+<body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %}">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        {{ content }}
+
+        <!-- Previous/next page links - displayed on every page -->
+        {% if paginator.total_posts > site.paginate %}
+            {% if page.class == 'home-template' %}
+                {% include post_pagination.html %}
+            {% elsif page.class == 'page-template' %}
+                {% include post_pagination.html %}
+            {% elsif page.class == 'author-template' %}
+                {% include author_pagination.html %}
+            {% elsif page.class == 'tag-template' %}
+                {% include tag_pagination.html %}
+            {% else %}
+                {% include post_pagination.html %}
+            {% endif %}
+        {% endif %}
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a> &copy; {{  site.time | date: '%Y' }}</section>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    {% if site.subscribers %}
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                {% if site.logo %}
+                    <img class="subscribe-overlay-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" />
+                {% endif %}
+                <h1 class="subscribe-overlay-title">Subscribe to {{ site.title }}</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                {% include subscribe-form.html placeholder="youremail@example.com" %}
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('{{ paginator.total_pages }}');
+    </script>
+    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    {% if paginator.total_pages > site.paginate %}
+    <script>
+        var maxPages = parseInt('{{ paginator.total_pages }}');
+    </script>
+    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script>
+    {% endif %}
+
+    <script src="/assets/js/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+
+</body>
+</html>

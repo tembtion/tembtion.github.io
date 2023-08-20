@@ -1,0 +1,55 @@
+---
+layout: photo
+title: "Photos"
+navigation: True
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link href="/assets/photo/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/photo/css/toolkit.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/assets/photo/js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div class="photo-album">
+    <header class="site-header outer " style="background:  transparent;z-index: 1000;">
+        <div class="inner">
+            {% include site-nav.html %}
+        </div>
+    </header>
+    <a class="polaroid">
+        <img alt="yurisa" data-action="zoom" src="/assets/photo/image/1.jpg">
+    </a>
+    <a class="polaroid">
+        <img alt="yurisa" data-action="zoom" src="/assets/photo/image/2.jpg">
+    </a>
+    <a class="polaroid">
+        <img alt="yurisa" data-action="zoom" src="/assets/photo/image/3.jpg">
+    </a>
+    <a class="polaroid">
+        <img alt="yurisa" data-action="zoom" src="/assets/photo/image/4.jpg">
+    </a>
+    <a class="polaroid">
+        <img alt="yurisa" data-action="zoom" src="/assets/photo/image/5.jpg">
+    </a>
+</div>
+<script type="text/javascript" src="/assets/photo/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/photo/js/imagesloaded.js"></script>
+<script type="text/javascript" src="/assets/photo/js/common.js"></script>
+<script type="text/javascript" src="/assets/photo/js/toolkit.js"></script>
+<script>
+    $(function() {
+        $(".photo-album").css({'width':$(window).width(),'height':$(window).height()}).imagesLoaded(function() {
+            $(".photo-album").showPhotos();
+        });
+    });
+</script>
+</body>
+</html>

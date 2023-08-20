@@ -1,0 +1,33 @@
+{% assign words_per_minute = site.words_per_minute | default: 200 %}
+
+    <article class="post-card {{ page.previous.class }}{% unless page.previous.cover %} no-image{% endunless %}">
+        {% if page.previous.cover %}
+            <a class="post-card-image-link" href="{{ site.baseurl }}{{ page.previous.url }}">
+                <div class="post-card-image" style="background-image: url({{ site.baseurl }}{{ page.previous.cover }})"></div>
+            </a>
+        {% endif %}
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="{{ site.baseurl }}{{ page.previous.url }}">
+                <header class="post-card-header">
+                    {% if page.previous.tags.size > 0 %}
+                        {% for tag in page.previous.tags %}
+                            {% if forloop.index == page.previous.tags.size %}
+                                <span class="post-card-tags">{{ tag | capitalize }}</span>
+                            {% else %}
+                               <span class="post-card-tags">{{ tag | capitalize }}</span>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
+                    <h2 class="post-card-title">{{ page.previous.title }}</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    {% if page.previous.excerpt %}
+                        <p>{{ page.previous.excerpt | strip_html | truncatewords: 33, "" }}</p>
+                    {% else %}
+                        <p>{{ page.previous.content | strip_html | truncatewords: 33, "" }}</p>
+                    {% endif %}
+                </section>
+            </a>
+        </div>
+    </article>

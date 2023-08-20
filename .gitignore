@@ -1,0 +1,7 @@
+.idea/
+.vagrant
+.sass-cache
+_site
+_gems
+_deploy.yml
+.jekyll-metadata
