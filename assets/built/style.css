@@ -1,0 +1,49 @@
+.hljs { background: none; }
+.post-card-image { transition: all .5s ease-out;}
+.post-card-image:hover { transform: scale(1.1); }
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.06);
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 8px;
+    background-clip: content-box;
+    border: 2px solid transparent;
+}
+
+.duik-go-to.show {
+    bottom: 25px;
+}
+.duik-go-to:hover, .duik-go-to:focus:hover {
+    color: #fff;
+    opacity: .84;
+}
+.duik-go-to {
+    z-index: 100;
+    width: 4.75rem;
+    height: 4.75rem;
+    color: #fff;
+    opacity: 1;
+    background-color: #6E1AC9;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: all .3s ease-out;
+    position: fixed;
+    bottom: -50px;
+    right: 25px;
+}
+
+.duik-go-to__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
