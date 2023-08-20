@@ -19,7 +19,7 @@
 }
 
 .duik-go-to.show {
-    bottom: 25px;
+    bottom: 50px;
 }
 .duik-go-to:hover, .duik-go-to:focus:hover {
     color: #fff;
@@ -37,7 +37,7 @@
     transition: all .3s ease-out;
     position: fixed;
     bottom: -50px;
-    right: 25px;
+    right: 70px;
 }
 
 .duik-go-to__inner {
