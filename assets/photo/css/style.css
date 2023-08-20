@@ -219,7 +219,10 @@ a img {
     box-shadow: 8px 5px 4px rgba(0,0, 0, 0.3);
 /*    -webkit-transition: -webkit-transform 0.5s ease-in;*/
 }
-
+.site-header:before {
+    bottom: 0;
+    background: none !important;
+}
 /*.photo-album img {*/
     /*width: 100%;*/
 /*}*/
