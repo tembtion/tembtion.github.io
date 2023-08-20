@@ -72,15 +72,15 @@
             {% endif %}
         {% endif %}
 
-        <!-- The footer at the very bottom of the screen -->
-        <footer class="site-footer outer">
-            <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a> &copy; {{  site.time | date: '%Y' }}</section>
-            </div>
-        </footer>
+
 
     </div>
-
+    <!-- The footer at the very bottom of the screen -->
+    <footer class="site-footer outer">
+        <div class="site-footer-content inner">
+            <section class="copyright"><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a> &copy; {{  site.time | date: '%Y' }}</section>
+        </div>
+    </footer>
     <!-- The big email subscribe modal content -->
     {% if site.subscribers %}
         <div id="subscribe" class="subscribe-overlay">
