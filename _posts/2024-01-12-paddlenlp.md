@@ -89,5 +89,5 @@ uie2 = Taskflow('information_extraction', task_path='../../checkpoint/model_best
 service.register_taskflow('uie', [uie1, uie2])
 ```
 
-[官方文档](https://github.com/PaddlePaddle/PaddleNLP/tree/develop/applications/information_extraction/document/deploy/simple_serving?_blank)
-
+[基于PaddleNLP SimpleServing 的服务化部署](https://github.com/PaddlePaddle/PaddleNLP/tree/develop/applications/information_extraction/document/deploy/simple_serving)  
+[PaddleNLP SimpleSevring](https://github.com/PaddlePaddle/PaddleNLP/blob/develop/docs/server.md)
