@@ -46,15 +46,13 @@ firewall-cmd --zone=public --list-ports
 ### 修改使用模型
 ```bash
 vi server.python
-
-uie = Taskflow("information_extraction", schema=schema, model="uie-x-base")
+# 使用uie-base目前最精准
+uie = Taskflow("information_extraction", schema=schema, model="uie-base")
 ```
-
-
-https://github.com/PaddlePaddle/PaddleNLP/tree/develop/model_zoo/uie
+[更多模型](https://github.com/PaddlePaddle/PaddleNLP/tree/develop/model_zoo/uie?_blank)
 
 |模型|结构|语言|
-|:-----:|:-----:|:-----:|
+|:-------:|:-------:|:-------:|
 |uie-base (默认)|12-layers, 768-hidden, 12-heads|中文|
 |uie-base-en|12-layers, 768-hidden, 12-heads|英文|
 |uie-medical-base|12-layers, 768-hidden, 12-heads|中文|
@@ -81,6 +79,5 @@ uie2 = Taskflow('information_extraction', task_path='../../checkpoint/model_best
 service.register_taskflow('uie', [uie1, uie2])
 ```
 
-[官方文档][1]
+[官方文档](https://github.com/PaddlePaddle/PaddleNLP/tree/develop/applications/information_extraction/document/deploy/simple_serving?_blank)
 
-[1]: https://github.com/PaddlePaddle/PaddleNLP/tree/develop/applications/information_extraction/document/deploy/simple_serving
