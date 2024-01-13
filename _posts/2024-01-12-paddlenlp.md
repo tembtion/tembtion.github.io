@@ -46,8 +46,8 @@ firewall-cmd --zone=public --list-ports
 ### 修改使用模型
 ```bash
 vi server.python
-# 使用uie-base目前最精准
-uie = Taskflow("information_extraction", schema=schema, model="uie-base")
+
+uie = Taskflow("information_extraction", schema=schema, model="uie-x-base")
 ```
 [更多模型](https://github.com/PaddlePaddle/PaddleNLP/tree/develop/model_zoo/uie?_blank)
 
