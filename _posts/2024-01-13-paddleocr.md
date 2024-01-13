@@ -3,7 +3,7 @@ layout: post
 current: post
 cover:  /assets/images/posts/2024-01-13-paddleocr/cover.jpg
 navigation: True
-title: centos7 paddleocr paddlehub 服务部署 
+title: Centos7 PaddleOcr 基于PaddleHub 服务部署 
 date: 2024-01-13 09:00:00
 tags: [getting-started]
 class: post-template
