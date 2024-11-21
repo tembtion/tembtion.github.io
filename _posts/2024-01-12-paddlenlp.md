@@ -5,7 +5,7 @@ cover:  /assets/images/posts/2024-01-12-paddlenlp/cover.jpg
 navigation: True
 title: Centos7 PaddleNLP 图片信息提取 基于 SimpleServing 的服务化部署
 date: 2024-01-13 09:00:00
-tags: [getting-started]
+tags: [ai]
 class: post-template
 subclass: 'post'
 ---

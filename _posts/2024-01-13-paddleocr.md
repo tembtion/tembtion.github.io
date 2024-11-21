@@ -5,7 +5,7 @@ cover:  /assets/images/posts/2024-01-13-paddleocr/cover.jpg
 navigation: True
 title: Centos7 PaddleOcr 基于PaddleHub 服务部署 
 date: 2024-01-13 09:00:00
-tags: [getting-started]
+tags: [ai]
 class: post-template
 subclass: 'post'
 ---

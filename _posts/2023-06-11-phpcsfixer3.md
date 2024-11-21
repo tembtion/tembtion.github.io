@@ -5,7 +5,7 @@ cover: /assets/images/posts/2023-06-11-phpcsfixer3/cover.png
 navigation: True
 title: PHP-CS-Fixer 3.0 安装及使用
 date: 2023-06-11 09:00:00
-tags: [getting-started]
+tags: [php]
 class: post-template
 subclass: 'post'
 ---

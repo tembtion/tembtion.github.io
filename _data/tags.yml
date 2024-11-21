@@ -1,4 +1,4 @@
-getting-started:
-  name: getting-started
+kubernetes:
+  name: kubernetes
   description: False
   cover: /assets/images/tag/speeches.jpg
