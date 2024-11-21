@@ -1,4 +1,20 @@
+ai:
+  name: ai
+  description: False
+  cover: /assets/images/tag/speeches.jpg
+git:
+  name: git
+  description: False
+  cover: /assets/images/tag/speeches.jpg
 kubernetes:
   name: kubernetes
+  description: False
+  cover: /assets/images/tag/speeches.jpg
+other:
+  name: other
+  description: False
+  cover: /assets/images/tag/speeches.jpg
+php:
+  name: php
   description: False
   cover: /assets/images/tag/speeches.jpg
