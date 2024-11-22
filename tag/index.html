@@ -24,22 +24,8 @@ navigation: True
             {% for tag in site.data.tags %}
             <article class="post-card tag-template" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <a class="post-card-image-link" href="{{ site.baseurl }}/tag/{{ tag[0] }}">
-                    <div class="post-card-image" style="background-image: url({{ site.baseurl }}{{ tag[1].cover }})"></div>
+                    <div class="post-card-image" style="font-size: 40px;color: #FFFFFF;align-content: center;text-align: center;background-image: url({{ site.baseurl }}{{ tag[1].cover }})">{{ tag[1].name }}</div>
                 </a>
-                <div class="post-card-content">
-                    <a class="post-card-content-link" href="{{ site.baseurl }}/tag/{{ tag[0] }}">
-                        <header class="post-card-header">
-                            <h2 class="post-card-title">{{ tag[1].name }}</h2>
-                        </header>
-                        <section class="post-card-excerpt">
-                            {% if tag[1].description %}
-                            <p>{{ tag[1].description | strip_html | truncatewords: 33, "" }}</p>
-                            {% else %}
-                            <p></p>
-                            {% endif %}
-                        </section>
-                    </a>
-                </div>
             </article>
             {% endfor %}
         </div>
