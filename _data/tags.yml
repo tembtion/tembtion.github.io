@@ -9,11 +9,11 @@ git:
 kubernetes:
   name: kubernetes
   description: False
-  cover: /assets/images/tag/kubernetes.png
+  cover: /assets/images/tag/kubernetes.jpg
 other:
   name: other
   description: False
-  cover: /assets/images/tag/other.jpg
+  cover: /assets/images/tag/other.png
 php:
   name: php
   description: False
