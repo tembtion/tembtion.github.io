@@ -22,7 +22,7 @@ navigation: True
     <div class="inner">
         <div class="post-feed">
             {% for tag in site.data.tags %}
-            <article class="post-card tag-template" data-aos="fade-up" data-aos-offset="100" data-aos-once="true" style="min-height:200px;max-width: 360px">
+            <article class="post-card tag-template" data-aos="fade-up" data-aos-offset="100" data-aos-once="true" style="min-height:200px;">
                 <a class="post-card-image-link" href="{{ site.baseurl }}/tag/{{ tag[0] }}">
                     <div class="post-card-image" style="font-size: 40px;color: #FFFFFF;align-content: center;text-align: center;background-image: url({{ site.baseurl }}{{ tag[1].cover }})">{{ tag[1].name }}</div>
                 </a>
