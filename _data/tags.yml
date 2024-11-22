@@ -4,12 +4,12 @@ ai:
   cover: /assets/images/tag/speeches.jpg
 git:
   name: git
-  description: False
-  cover: /assets/images/tag/speeches.jpg
+  description: Git 是一个分布式版本控制系统，用于跟踪代码和文件的更改。它最初由 Linus Torvalds 开发（Linux 内核的创造者），现已成为开源项目管理和软件开发领域的核心工具之一。
+  cover: /assets/images/tag/yellow-banner.png
 kubernetes:
   name: kubernetes
   description: False
-  cover: /assets/images/tag/speeches.jpg
+  cover: /assets/images/tag/blue-banner.png
 other:
   name: other
   description: False
