@@ -21,4 +21,4 @@ php:
 centos:
   name: centos
   description: False
-  cover: /assets/images/tag/centos.jpg
+  cover: /assets/images/tag/centos.png
