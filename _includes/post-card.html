@@ -17,7 +17,7 @@
             <a class="post-card-content-link" href="{{ site.baseurl }}{{ post.url }}">
                 <header class="post-card-header">
                     {% if post.tags.size > 0 %}
-                        <span class="post-card-tags">{{ post.tags | join: "，" }}</span>
+                        <span class="post-card-tags">{{ post.tags | join: "," }}</span>
                     {% endif %}
 
                     <h2 class="post-card-title">{{ post.title }}</h2>
