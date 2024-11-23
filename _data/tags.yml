@@ -18,3 +18,7 @@ php:
   name: php
   description: False
   cover: /assets/images/tag/php.jpg
+centos:
+  name: centos
+  description: False
+  cover: /assets/images/tag/centos.jpg
