@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: showdoc
+  namespace: project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: showdoc
+  template:
+    metadata:
+      name: showdoc
+      creationTimestamp: null
+      labels:
+        app: showdoc
+    spec:
+      containers:
+        - image: registry.cn-shenzhen.aliyuncs.com/star7th/showdoc
+          name: showdoc
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: showdocdir
+              mountPath: /showdoc_data/html
+      volumes:
+        - name: showdocdir
+          hostPath:
+            path: /home/showdoc_data/html
+            type: DirectoryOrCreate
