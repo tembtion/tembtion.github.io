@@ -1,0 +1,15 @@
+FROM infiniflow/ragflow:v0.17.2-slim AS builder
+
+WORKDIR /ragflow
+
+COPY web web
+COPY docs docs
+
+RUN --mount=type=cache,id=ragflow_npm,target=/root/.npm,sharing=locked \
+    cd web && npm install && npm run build
+
+FROM infiniflow/ragflow:v0.17.2-slim AS production
+
+WORKDIR /ragflow
+
+COPY --from=builder /ragflow/web/dist /ragflow/web/dist
